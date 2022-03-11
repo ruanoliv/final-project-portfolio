@@ -1,0 +1,16 @@
+nav{
+    background-color: #23212c;
+    border: 1px solid #fff;
+    width: 100vw;
+    height: 9vh;
+}
+ul{
+    list-style: none;
+}
+.link{
+    text-decoration: none;
+    color: #615f73;
+}
+.link:hover{
+    color: #fff;
+}

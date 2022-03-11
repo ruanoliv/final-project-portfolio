@@ -8,7 +8,6 @@ export default function App(){
   return(
     <> 
       <Header/>
-      <hr/>
       <Routes>
             <Route index element={<FormData />} />
             <Route path="/" element={<FormData />} />
