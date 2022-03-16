@@ -2,12 +2,11 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   width: 100%;
-  margin: 30px 0 0 0;
 `;
 
 export const Content = styled.div`
   width: 244px;
-  height: 288px;
+  height: 194px;
   border-radius: 10px;
   background-color: #392f3d;
   display: flex;
@@ -15,7 +14,13 @@ export const Content = styled.div`
   justify-content: center;
   align-items: center;
 
-  .About{
-    
+  .GitPhoto {
+    margin: 0 0 30px 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #615f73;
+  }
+  .Name {
   }
 `;

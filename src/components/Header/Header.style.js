@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   width: 100%;
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,11 +10,6 @@ export const Wrapper = styled.div`
 
 export const Content = styled.div`
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-
   .Navigator {
     background-color: #23212c;
     border-bottom: 1px solid #fff;
