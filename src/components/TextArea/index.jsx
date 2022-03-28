@@ -7,8 +7,8 @@ export default function TextArea(props) {
             <Content>
                 <textarea className="TextArea"
                     name={props.name}
-                    autocomplete="off"
                     placeholder={props.placeholder || "Your message"}
+                    onChange={props.changed}
                 ></textarea>
             </Content>
         </Wrapper>

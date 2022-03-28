@@ -5,7 +5,7 @@ export default function Button(props) {
     return (
         <Wrapper>
             <Content>
-                <button className="Button" type={props.type}>
+                <button style={{width: props.width, height:props.height}} className="Button" type={props.type || 'button'} onClick={props.clicked}>
                     {props.content}
                 </button>
             </Content>
