@@ -25,7 +25,7 @@ export default function FormData() {
     function getCheckbox(e){
         setUserdata({
             ...userData,
-            tecnologys: [...userData.tecnologys, (e.target.name)]
+            tecnologys: [...userData.tecnologys, {name:(e.target.name)}]
         })
     }
     return (
@@ -53,7 +53,7 @@ export default function FormData() {
                     <TextArea name="bioMessage" placeholder="Bio" changed={fillUserData} />
 
                     <Link to="/home" state={ userData }>
-                        <Button type="button" content="Go to portfolio" />
+                        <Button type="button" content="Go to portfolio">Ir para portfolio</Button>
                     </Link>
                 </Form>
             </Content>

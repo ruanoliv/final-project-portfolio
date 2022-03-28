@@ -9,8 +9,8 @@ export const Wrapper = styled.div`
   
   export const Content = styled.div`
   .Button {
-    width: 400px;
-    height: 45px;
+    width: ${props => props.buttonWidth || "400px"};
+    height:  ${props => props.buttonHeight || "45px"};
     background-color: #392f3d;
     border-radius: 5px;
     color: #615f73;

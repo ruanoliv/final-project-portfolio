@@ -4,9 +4,9 @@ import { Wrapper, Content } from "./Button.style";
 export default function Button(props) {
     return (
         <Wrapper>
-            <Content>
-                <button style={{width: props.width, height:props.height}} className="Button" type={props.type || 'button'} onClick={props.clicked}>
-                    {props.content}
+            <Content buttonWidth={props.width} buttonHeight={props.height}>
+                <button className="Button" type={props.type || 'button'} onClick={props.clicked}>
+                    {props.children}
                 </button>
             </Content>
         </Wrapper>

@@ -2,7 +2,6 @@ import React, {useState, useEffect, useCallback} from "react";
 import { Wrapper, Content } from "./Home.style";
 import GitPhoto from '../../components/GitPhoto'
 import About from '../../components/About'
-import InformationContainer from "../../components/InformationContainer";
 import Pagination from "../../components/Pagination";
 import { useLocation } from "react-router-dom";
 
@@ -74,12 +73,13 @@ export default function Home(props) {
     }, [getGitContainerData]);
 
       console.log(gitUserData)
+      console.log(gitUserContainers)
         return (
             <Wrapper>
                 <Content>
                     <aside className="UserInformation">
                         <GitPhoto data={gitUserData}/>
-                        <About/>
+                        <About data={location.state}/>
                     </aside>
                     <main className="Content">
                         <Pagination tecnology={location.state} data={gitUserData}/>

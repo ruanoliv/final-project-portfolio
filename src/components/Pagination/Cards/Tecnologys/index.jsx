@@ -2,14 +2,18 @@ import React from "react";
 import { Wrapper, Content } from "./Tecnologys.style";
 
 export default function Tecnologys(props) {
-    console.log(props.techs)
+    console.log(props.techs[0])
     return (
         <Wrapper>
             <Content>
-                OI
-                {props.techs.map(tech =>{
-                    <div className="tech">Oi {tech[0]}</div>
+                <div>
+                {props.techs.map((tech, index) =>{
+                  return (
+                        <div className="tech" key={index}>{tech.name}</div>
+                  )
                 })}
+
+                </div>
             </Content>
         </Wrapper>
     )
