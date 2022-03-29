@@ -10,9 +10,9 @@ export default function About(props) {
             <Content>
                 <div className="github-card">
                     <ul class="status">
-                        <li><strong>{props.data.bioMessage}</strong></li>
-                        <li><AiOutlineLinkedin size={20} /><strong></strong></li>
-                        <li><GoLocation size={20} /><strong></strong></li>
+                        <li><strong>{props.inputData.bioMessage}</strong></li>
+                        <li><AiOutlineLinkedin size={20} /><strong>{props.inputData.linkedin}</strong></li>
+                        <li><GoLocation size={20} /><strong>{props.apiData.location}</strong></li>
                         <li><strong></strong></li>
                     </ul>
                 </div>

@@ -79,7 +79,7 @@ export default function Home(props) {
                 <Content>
                     <aside className="UserInformation">
                         <GitPhoto data={gitUserData}/>
-                        <About data={location.state}/>
+                        <About inputData={location.state} apiData={gitUserData}/>
                     </aside>
                     <main className="Content">
                         <Pagination tecnology={location.state} data={gitUserData}/>

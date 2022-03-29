@@ -38,7 +38,7 @@ ul:after {
 }
 
 .status strong {
-    display: block;
+    margin: 0px 0px 0px 10px;
     color: #615f73;
     font-size: 16px;
     line-height: 1.6

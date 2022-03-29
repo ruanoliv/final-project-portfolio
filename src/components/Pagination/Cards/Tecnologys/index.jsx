@@ -6,10 +6,10 @@ export default function Tecnologys(props) {
     return (
         <Wrapper>
             <Content>
-                <div>
+                <div className="allTech">
                 {props.techs.map((tech, index) =>{
                   return (
-                        <div className="tech" key={index}>{tech.name}</div>
+                        <div className={`tech ${tech.name}`} key={index}>{tech.name}</div>
                   )
                 })}
 
