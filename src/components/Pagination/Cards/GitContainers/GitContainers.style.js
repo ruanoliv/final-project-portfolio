@@ -10,19 +10,10 @@ export const Wrapper = styled.div`
 
   `;
   export const Content = styled.div`
-  .allTech{
+  .allContainers{
     display: grid;
-    grid-template-columns: 150px 150px 150px;
+    grid-template-columns: 250px 250px;
     grid-gap: 10px;
+    margin-left: 20px;  
   }
-  .tech {
-    margin: 20px 0px 0px 0px;
-    width: 100px;
-    height: 30px;
-    border-radius: 5px;
-    padding: 5px;
-    text-align: center;
-    color: #fff;
-  }
-  
-`;
+  `;

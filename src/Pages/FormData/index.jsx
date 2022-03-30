@@ -10,24 +10,30 @@ import { Wrapper, Content } from "./FormData.style";
 export default function FormData() {
 
     const [userData, setUserdata] = useState({
-        github: '',
-        linkedin: '',
-        bioMessage: '',
+        github: "",
+        linkedin: "",
+        bioMessage: "",
         tecnologys:[]
     })
+    
+    const [disable, setDisable] = useState(true)
 
-    function fillUserData(e) {
+    const fillUserData = (e) => {
         setUserdata({
             ...userData,
             [e.target.name]: e.target.value,
         })
+        if(userData.github != "" && userData.linkedin != "" && userData.bioMessage != "" && userData.tecnologys != []) {
+            setDisable(false)
+        }
     }
-    function getCheckbox(e){
+    const getCheckbox = (e) =>{
         setUserdata({
             ...userData,
             tecnologys: [...userData.tecnologys, {name:(e.target.name)}]
         })
     }
+
     return (
         <Wrapper>
             <Content>
@@ -41,6 +47,8 @@ export default function FormData() {
                                 <div key={tecnolog.id}>
                                     <Input
                                         type="checkbox"
+                                        width='20px'
+                                        height='20px'
                                         value={tecnolog.name}
                                         name={tecnolog.name}
                                         changed={getCheckbox}
@@ -51,9 +59,9 @@ export default function FormData() {
                         })}
                     </div>
                     <TextArea name="bioMessage" placeholder="Bio" changed={fillUserData} />
-
+                    
                     <Link to="/home" state={ userData }>
-                        <Button type="button" content="Go to portfolio">Ir para portfolio</Button>
+                        <Button type="button" content="Go to portfolio" disable={disable}>Ir para portfolio</Button>
                     </Link>
                 </Form>
             </Content>

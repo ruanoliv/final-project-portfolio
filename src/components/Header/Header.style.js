@@ -2,18 +2,14 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 `;
 
 export const Content = styled.div`
-  width: 100%;
+
   .Navigator {
     background-color: #23212c;
     border-bottom: 1px solid #fff;
-    width: 100vw;
+    width: 100%;
     height: 9vh;
   }
 

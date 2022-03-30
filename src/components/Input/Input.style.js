@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  width: 400px;
   display: flex;
   flex-direction: column;
   background-color: #23212c;
