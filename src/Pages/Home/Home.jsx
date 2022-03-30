@@ -3,6 +3,7 @@ import { Wrapper, Content } from "./Home.style";
 import GitPhoto from "../../components/GitPhoto";
 import About from "../../components/About";
 import Pagination from "../../components/Pagination";
+import Loading from '../../components/Loading';
 import { useLocation } from "react-router-dom";
 
 export default function Home(props) {
@@ -11,6 +12,7 @@ export default function Home(props) {
         name: "carregando...",
     });
     const [gitUserContainers, setGitContainerData] = useState({});
+    const [loading, setLoading] = useState(true)
 
     async function getGitDataByLogin() {
         let url = "https://api.github.com/users/" + location.state.github;
@@ -37,6 +39,15 @@ export default function Home(props) {
     useEffect(() => {
         getGitUserData();
     }, [getGitUserData]);
+
+    useEffect(() => {
+        if (loading) {
+          setTimeout(() => {
+          setLoading(false);
+        }, 2000);
+        }
+      }, [loading]);
+      
 
     async function getGitContainersByLogin() {
         let url =
@@ -70,6 +81,7 @@ export default function Home(props) {
     return (
         <Wrapper>
             <Content>
+                {loading ? <Loading /> : 
                 <section className="Home">
                     <div className="UserInformation">
                         <GitPhoto data={gitUserData} />
@@ -83,6 +95,7 @@ export default function Home(props) {
                             />
                     </div>
                 </section>
+                }
             </Content>
         </Wrapper>
     );

@@ -14,9 +14,11 @@ export const Content = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 
   ul {
-    text-transform: uppercase;
+    word-break: break-word;
+    width: 200px;
     font-size: 12px;
     color: #707070;
     list-style-type: none;

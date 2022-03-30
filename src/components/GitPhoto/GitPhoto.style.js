@@ -21,6 +21,8 @@ export const Content = styled.div`
     border-radius: 50%;
     background-color: #615f73;
   }
-  .Name {
+  a{
+    text-decoration: none;
+    color: #615f73;
   }
 `;

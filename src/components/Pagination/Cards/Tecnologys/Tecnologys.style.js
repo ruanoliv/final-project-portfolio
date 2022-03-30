@@ -22,7 +22,7 @@ export const Wrapper = styled.div`
     border-radius: 5px;
     padding: 5px;
     text-align: center;
-    color: #fff;
+    color: #000;
   }
   
 `;

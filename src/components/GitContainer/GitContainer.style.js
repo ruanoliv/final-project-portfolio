@@ -23,7 +23,7 @@ export const Content = styled.div`
     width: 100px;
     heigth: 20px;
     border-radius: 5px; 
-    color: white;
+    color: #000;
     margin: 10px 0 0 30px;
     text-align: center;
   }

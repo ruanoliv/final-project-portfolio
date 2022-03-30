@@ -3,4 +3,5 @@ export default [
     {id: 1, name: "PHP"},
     {id: 2, name: "HTML"},
     {id: 3, name: "CSS"},
+    {id: 4, name: "Java"},
 ]
